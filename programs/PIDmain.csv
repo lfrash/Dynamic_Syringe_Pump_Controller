@@ -1,0 +1,12 @@
+STOP,4,,
+CF MODE,4,,
+VARIABLE=,,,TargetRate=0.0
+VARIABLE=,,,MaxFlowRate=0.1*UQ4
+VARIABLE=,,,MinFlowRate=-0.1*UQ4
+SUB,,,PIDinit
+RUN,4,,
+SUB,,1500,PIDcalc
+SQ=,4,,FlowRate
+VARIABLE=,,,Disp1=LVDT
+VARIABLE=,,,Time1=Time
+GOTO,,,-005|1|>|0

@@ -1,0 +1,2 @@
+VARIABLE=,,,COS=cos(Time*10),
+GOTO,,200,-002|Time|>=|0,
